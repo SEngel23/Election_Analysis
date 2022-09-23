@@ -27,17 +27,28 @@ Code Output
 File Resource: [election_analysis.txt](Resources/election_results.csv)
 ```
 Election Results
--------------------------
+---------------------------------------
 Total Votes: 369,711
--------------------------
+---------------------------------------
+
+County Votes:
+Jefferson: 10.5% (38,855)
+
+Denver: 82.8* (306,055)
+
+Arapahoe: 6.7% (24,801)
+
+---------------------------------------
+Largest county turnout: Denver
+---------------------------------------
 Charles Casper Stockham: 23.0% (85,213)
 Diana DeGette: 73.8% (272,892)
 Raymon Anthony Doane: 3.1% (11,606)
-------------------------------------
+---------------------------------------
 Winner: Diana DeGette
 Winning Vote Count: 272,892
 Winning Percentage: 73.8%
--------------------------------------
+---------------------------------------
 ```
 
 ---
@@ -51,10 +62,10 @@ By using tools in Python and with the direction provided by Tom and Seth, the da
 
 ---
 ## Challenge Summary
-1. Calculate the total number of votes.
+#### 1. Calculate the total number of votes.
 -  In Python, I used the with open () funtion to access the election csv data file. Then to count up all the votes, an accumulator variable needs to be initialized (total_votes) and set to zero.
 - Lastly, using the print () function, run the code for total_votes.(Fg. 1)
-2. Get a complete list of candidates who received votes.
+#### 2. Get a complete list of candidates who received votes.
 - By applying the rows function and intializing candidate_options to zero, I was able to add the candidate_name to candidate_options list by using the append() function and successfully pull the candidates names who received votes. Then print() the candidate_options. (Fg. 1)
 ```
 # Open the election results and read the file.
@@ -77,13 +88,13 @@ with open(file_to_load) as election_data:
 
 ```
 
-Output #1 and #2
+##### Output #1 and #2
 ```
  Total Votes: 369,711
  List of candidates who received votes
      ['Charles Casper Stockham', 'Diana Degette', 'Raymon Anthony Doane']
 ```
-3. Calculate the total number of votes each candidate received.
+#### 3. Calculate the total number of votes each candidate received.
 - Using an if statement within the for loop, I was able to get a complete list of candidates who received votes and list them out in the output.
 
 ```
@@ -100,7 +111,7 @@ Output #1 and #2
         candidate_votes[candidate_name] +=1
 ```
 
-4. Calculate the percentage of votes each candidate won.
+#### 4. Calculate the percentage of votes each candidate won.
 ```
 # Determine the percentage of votes for each candidate by looping through the counts.
     # Iterate through the candidate list.
@@ -122,3 +133,15 @@ Output #1 and #2
 - After everything was said and done, I put together a winning candidate summary to list out the final results and then insert them into a txt file for Tom and Seth.
 
 ![winning_print.png](Resources/winning_print.png)
+
+---
+
+## Election Audit Summary
+ - Vote Results: As you can see from the election results below, there were a total of 369,711 total votes for this election in Colorado. 
+- County Results: Denver had the highest vote count out of any county, making up 82.8% of the total votes and Arapahoe made up the fewest vote counts with only 6.7% at 24,801 total votes.
+- Candidates: There were three candidates that received votes during this election: Charles Casper Stockham, Diana DeGette, and Raymon Anthony Doane.
+- Candidate Winner: With 272,892 votes, making up 73.8% of the total votes, Diana DeGette is the winner.
+
+![election_results.png](Resources/election_results.png)
+
+
