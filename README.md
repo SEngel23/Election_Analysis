@@ -121,4 +121,4 @@ Output #1 and #2
 ```
 - After everything was said and done, I put together a winning candidate summary to list out the final results and then insert them into a txt file for Tom and Seth.
 
-![winning_print.png](Resources\winning_print.png)
+![winning_print.png](Resources/winning_print.png)
